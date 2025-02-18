@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+@if (TempData != null)
+{
+    <span>@TempData["Msg"]</span>
+}
+
+<form method="post">
+    <input type="hidden" name="EventId" value="@Model.PId" />
+    <h3>Event Name</h3>
+    <input type="text" name="Name" value="@Model.Name" class="form-control" /><br />
+    <h3>Venue</h3>
+    <input type="text" name="Venue" value="@Model.Contact" class="form-control" /><br />
+    <h3>Description</h3>
+    <input type="hidden" name="Description" value="@Model.EventId" class="form-control" /><br />
+
+    <input type="submit" value="Update" />
+</form>
+

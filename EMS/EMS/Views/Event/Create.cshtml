@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Event</h2>
+<form method="post">
+    <h3>Name</h3>
+    <input type="text" name="Name" placeholder="Event's Name" class="form-control" value="@Model.Name" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
+
+    <h3>Date</h3>
+    <input type="date" name="Date" placeholder="Event's Date" class="form-control" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Date")</span><br />
+
+    <h3>Venue</h3>
+    <input type="text" name="Venue" placeholder="Event's Venue" class="form-control" value="@Model.Venue" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Venue")</span><br />
+
+    <h3>Description</h3>
+    <input type="text" name="Description" placeholder="Event's Description" class="form-control" value="@Model.Description" /><br />
+    <span class="text-danger">@Html.ValidationMessage("Description")</span><br />
+
+    <input type="submit" value="ADD" class="btn btn-success" />
+
+</form>
+

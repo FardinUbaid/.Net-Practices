@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<hr />
+<h1>Are you sure to delete?</h1>
+<h2>Event Name: @Model.Name</h2>
+<h4>Venue: @Model.Venue</h4>
+<h4>Description: @Model.Description</h4>
+<hr />
+<form method="post">
+    <input type="hidden" name="EventId" value="@Model.EventId" />
+    <input type="submit" value="Yes" name="dec" class="btn btn-danger" />
+    <input type="submit" value="No" name="dec" class="btn btn-success" />
+</form>

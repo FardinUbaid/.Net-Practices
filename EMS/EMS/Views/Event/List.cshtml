@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<a href="/Event/create" class="btn btn-success">Create</a>
+
+<table class="table table-success">
+    <tr>
+        <td>Event Name</td>
+        <td>Date</td>
+        <td>Venue</td>
+        <td>Description</td>
+        <td>Operations</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr width="100%">
+            <td>@item.Name</td>
+            <td>@item.Date</td>
+            <td>@item.Venue</td>
+            <td>@item.Description</td>
+            <td>
+                <a href="@Url.Action("Update", "Event", new { EventId = item.EventId })" class="btn btn-success">EDIT</a>
+                <a href="@Url.Action("Delete", "Event", new { EventId = item.EventId })" class="btn btn-danger">DELETE</a>
+                @*<a href="/Events/update/@item.EventId" class="btn btn-danger">Delete</a>*@
+            </td>
+        </tr>
+    }
+</table>
+
