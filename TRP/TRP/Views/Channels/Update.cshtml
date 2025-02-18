@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+@if (TempData != null)
+            {
+                <span>@TempData["Msg"]</span>
+            }
+
+<form method="post">
+    <input type="hidden" name="ChannelId" value="@Model.ChannelId" />
+    <h3>Channel Name</h3>
+    <input type="text" name="ChannelName" value="@Model.ChannelName" class="form-control" /><br />
+    <h3>Established Year</h3>
+    <input type="number" name="EstablishedYear" value="@Model.EstablishedYear" class="form-control" /><br />
+    <h3>Country</h3>
+    <input type="text" name="Country" value="@Model.Country" class="form-control" /><br />
+
+    <input type="submit" value="Update" />
+</form>

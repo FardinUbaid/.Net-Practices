@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<a href="/Channels/create" class="btn btn-success">Create</a>
+
+<table class="table table-success">
+    <tr>
+        <td>Channel Name</td>
+        <td>Established Year</td>
+        <td>Country</td>
+        <td>Operations</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr width="100%">
+            <td>@item.ChannelName</td>
+            <td>@item.EstablishedYear</td>
+            <td>@item.Country</td>
+            <td>
+                <a href="@Url.Action("Update", "Channels", new { ChannelId = item.ChannelId })" class="btn btn-success">EDIT</a> 
+                <a href="@Url.Action("Delete", "Channels", new { ChannelId = item.ChannelId })" class="btn btn-danger">DELETE</a> 
+                @*<a href="/Channels/update/@item.ChannelId" class="btn btn-danger">Delete</a>*@
+            </td>
+        </tr>
+    }
+</table>
+

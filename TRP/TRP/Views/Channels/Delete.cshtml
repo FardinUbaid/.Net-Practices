@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h1>Are you sure to delete?</h1>
+<h2>Channel Name: @Model.ChannelName</h2>
+<h4>Established Year: @Model.EstablishedYear</h4>
+<h4>Country: @Model.Country</h4>
+<form method="post">
+    <input type="hidden" name="ChannelId" value="@Model.ChannelId" />
+    <input type="submit" value="Yes" name="dec" class="btn btn-danger" />
+    <input type="submit" value="No" name="dec" class="btn btn-success" />
+</form>
